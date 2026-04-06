@@ -31,7 +31,8 @@ const ProfileEditCard = ({ userData }) => {
         { withCredentials: true },
       );
       console.log("handleProfileEdit: ", res);
-      dispatch(addUser(res.data));
+      dispatch(addUser(res.data.data));
+      setError("");
       setShowToast(true);
       setTimeout(() => {
         setShowToast(false);

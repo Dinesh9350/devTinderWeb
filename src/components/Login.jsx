@@ -37,17 +37,17 @@ const Login = () => {
   const handleSignup = async () => {
     try {
       const res = await axios.post(
-        "/signup",
-        { firstName, lastName, emailId, password },
+        BASE_URL + "/signup",
+        { firstName, lastName, email: emailId, password },
         { withCredentials: true },
       );
       console.log("handleSignup", res);
-      //  dispatch(addUser(res.data));
-      navigate("/login");
-    } catch (error) {
+      dispatch(addUser(res.data.data));
+      navigate("/");
+    } catch (err) {
       console.log("err: ", err);
       console.log("err.response: ", err?.response);
-      setError(err?.response?.data?.message);
+      setError(err?.response?.message);
     }
   };
 
@@ -55,7 +55,9 @@ const Login = () => {
     <div className="flex justify-center items-center pt-10">
       <div className="card card-dash bg-base-300 w-96 ">
         <div className="card-body">
-          <h2 className="card-title  pb-4">Login</h2>
+          <h2 className="card-title text-center  pb-4">
+            {isLoginForm ? "Login" : "Signup"}
+          </h2>
           <div className="space-y-3">
             {!isLoginForm && (
               <>
