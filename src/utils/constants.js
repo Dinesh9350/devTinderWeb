@@ -1,2 +1,3 @@
+//backend url
 export const BASE_URL =
-  location.hostname === "localhost" ? "http://localhost:5173" : "/api";
+  location.hostname === "localhost" ? "http://localhost:4000" : "/api";

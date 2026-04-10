@@ -350,6 +350,7 @@ show toast on profile update
 # Episode-18 - DevTinder UI - Part 4 ✅
 
 Feature: Accept/reject connections
+
 - see all my connections
 
 ```js
@@ -361,7 +362,9 @@ Feature: Accept/reject connections
 //Connections.jsx
 show all connections in that and store in redux connectionsSlice
 ```
+
 Accept , Reject requests
+
 - see all my Requests -> accept, reject button functional
 
 ```js
@@ -374,7 +377,6 @@ show all Requests in that and store in redux requestsSlice
 Accepted or Rejected user should be removed from Request Page
 remove data of that specific user from redux
 
-
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # Episode-19 - DevTinder UI - Part 5 ✅
@@ -383,12 +385,24 @@ remove data of that specific user from redux
 - sigup new user
 - E2E testing
 
-
-create signup in login page itself 
+create signup in login page itself
 (backend) signup do the same as login, add token and send back the user add in slice
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+# Season 3 Episode-07 - Payment Gateway Integration ft Razorpay ✅
+
+1. Create Order - /createOrder
+2. Payment Verification - /verifyPayment
+
+Backed (secret key) => Razorpay
+
+Signup on Razorpay and complete KYC
+
+Frontend (create order) -> Backend (secret key) -> RazorPay (create order + securet key) -> orderId -> Backend (orderID) -> Frontend
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Season 3 Episode-08 - Web Sockets & socket.io ✅
 
 

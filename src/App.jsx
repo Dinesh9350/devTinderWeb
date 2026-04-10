@@ -9,6 +9,9 @@ import Feed from "./components/Feed";
 import Connections from "./components/Connections";
 import Requests from "./components/Requests";
 import { Navigate } from "react-router-dom";
+import Chat from "./components/Chat";
+import { io } from "socket.io-client";
+
 
 function App() {
   return (
@@ -22,9 +25,10 @@ function App() {
             {/* Protected routes (with Body) */}
             <Route path="/" element={<Body />}>
               <Route path="/" element={<Feed />} />
-              <Route path="profile" element={<Profile />} />
-              <Route path="requests" element={<Requests />} />
-              <Route path="connections" element={<Connections />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/requests" element={<Requests />} />
+              <Route path="/connections" element={<Connections />} />
+              <Route path="/chat/:targetUserId" element={<Chat />} />
             </Route>
           </Routes>
         </BrowserRouter>

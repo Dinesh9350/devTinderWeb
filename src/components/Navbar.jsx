@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const user = useSelector((store) => store.user);
-  console.log("Navbar user: ", user);
+  // console.log("Navbar user: ", user);
 
   const dispatch = useDispatch();
   const naviagte = useNavigate();
